@@ -1,4 +1,4 @@
-package BinarySearch.LeetCode_74;
+package EveryDay.LeetCode_74;
 
 public class Solution2 {
     static public boolean searchMatrix(int[][] matrix, int target) {

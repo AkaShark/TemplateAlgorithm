@@ -1,4 +1,4 @@
-package BinarySearch.LeetCode_74;
+package EveryDay.LeetCode_74;
 
 public class Solution {
     // 抽象成BST方法
