@@ -7,6 +7,7 @@ public class Solution {
         return mirror(root.left, root.right);
     }
 
+    // 二叉树的遍历操作
     private boolean mirror(TreeNode left, TreeNode right) {
         if (left == null && right == null) return true;
         if (left == null || right == null) return false;
