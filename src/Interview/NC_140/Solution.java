@@ -1,12 +1,12 @@
 package Interview.NC_140;
 
 public class Solution {
-    public int[] MySort (int[] arr) {
+    static public int[] MySort (int[] arr) {
         quickSort(arr, 0, arr.length - 1);
         return arr;
     }
 
-    private void quickSort(int[] list, int left, int right) {
+    static private void quickSort(int[] list, int left, int right) {
         if (left < right) {
             // 寻找分割点
             int point = partition(list, left, right);
@@ -17,7 +17,7 @@ public class Solution {
         }
     }
 
-    private int partition(int[] list, int left, int right) {
+    static private int partition(int[] list, int left, int right) {
         // 使用第一个数作为基准
         int first = list[left];
         while (right > left) {
@@ -38,9 +38,17 @@ public class Solution {
         return left;
     }
 
-    private void swap(int[] array, int i, int j) {
+   static private void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] array = new int[]{1, 2, 5, 4, 3, 6, 8, 7};
+        int[] ans = MySort(array);
+        for (int i = 0; i < ans.length; i++) {
+            System.out.println(ans[i]);
+        }
     }
 }
