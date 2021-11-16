@@ -6,13 +6,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-   static public int lowestCommonAncestor(TreeNode root, int o1, int o2) {
-       return 0;
+    static TreeNode node = null;
+    static public int lowestCommonAncestor(TreeNode root, int o1, int o2) {
+        findPath(root, o1, o2);
+        return node.val;
     }
 
 
     // 递归树查找 对应的node节点的路径
-   static private void findPath(TreeNode root, TreeNode node, List<TreeNode> path) {
+   static private boolean findPath(TreeNode root, int o1, int o2) {
+       if (root == null) return false;
+       boolean left = findPath(root.left, o1, o2);
+       boolean right = findPath(root.right, o1, o2);
+       if (left && right || ((left || right) && (root.val == o1 || root.val == o2))) {
+           node = root;
+       }
+       return left || right || root.val == o1 || root.val == o2;
 
     }
 
