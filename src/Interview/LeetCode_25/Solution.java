@@ -16,6 +16,7 @@ public class Solution {
                 if (tail == null)
                     return dummy.next;
             }
+            // k个翻转一次
             ListNode next = tail.next;
             ListNode[] reverse = myReverse(head, tail);
             head = reverse[0];
@@ -29,6 +30,7 @@ public class Solution {
         return dummy.next;
     }
 
+    // 翻转
     public ListNode[] myReverse(ListNode head, ListNode tail) {
         ListNode prev = tail.next;
         ListNode p = head;
