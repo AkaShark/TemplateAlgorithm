@@ -1,4 +1,4 @@
-package LeetCode_496;
+package Interview.LeetCode_496;
 
 import java.util.Arrays;
 import java.util.HashMap;
