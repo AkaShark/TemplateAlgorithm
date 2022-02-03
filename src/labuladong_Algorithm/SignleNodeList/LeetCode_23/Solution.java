@@ -1,4 +1,4 @@
-package labuladong_Algorithm.LeetCode_23;
+package labuladong_Algorithm.SignleNodeList.LeetCode_23;
 
 import Util.ListNode;
 
