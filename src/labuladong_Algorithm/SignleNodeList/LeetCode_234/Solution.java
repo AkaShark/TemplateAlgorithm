@@ -38,7 +38,7 @@ public class Solution {
         return res;
     }
 
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome_3(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
@@ -70,6 +70,27 @@ public class Solution {
             head = next;
         }
         return pre;
+    }
+
+    public boolean isPalindrome(ListNode head) {
+        left = head;
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        if (fast != null) {
+            slow = slow.next;
+        }
+        return traverse_1(slow);
+    }
+
+    public boolean traverse_1(ListNode right) {
+        if (right == null) return true;
+        boolean res = traverse_1(right.next);
+        res = res && left.val == right.val;
+        left = left.next;
+        return res;
     }
 
 
