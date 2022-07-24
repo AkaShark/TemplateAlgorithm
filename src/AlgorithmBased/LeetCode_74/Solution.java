@@ -8,7 +8,7 @@ public class Solution {
         int elementNums = rows * cols;
         int left = 0, right = elementNums - 1;
         while (left < right) {
-            int mid = (right - left) / 2 + left;
+            int mid = (right - left) / 2 + left; // 防止整型越界
             int[] coordinate = conversionRow(mid, rows, cols);
             if (matrix[coordinate[0]][coordinate[1]] > target) {
                 right = mid - 1;
