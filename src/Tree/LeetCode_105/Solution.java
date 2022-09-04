@@ -18,6 +18,7 @@ public class Solution {
     // 不传入子数组 传入数组和对应的left right 来控制数组的范围 实现子数组
     private TreeNode build(int[] preorder, int[] inorder, int pre_left, int pre_right, int in_left, int in_right) {
         if (pre_left > pre_right) return null;
+        // 根节点
         TreeNode node = new TreeNode(preorder[pre_left]);
         int index = indexMap.get(node.val); // 根节点的位置
         int size_left = index - in_left;
