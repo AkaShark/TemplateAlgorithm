@@ -14,6 +14,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[678]有效的括号字符串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/doc/content/[678]有效的括号字符串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn678" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[678]有效的括号字符串.java" />
+              <option name="titleSlug" value="valid-parenthesis-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[剑指 Offer 34]二叉树中和为某一值的路径.java">
           <value>
             <LeetcodeEditor>
@@ -22,6 +33,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[剑指 Offer 34]二叉树中和为某一值的路径.java" />
               <option name="titleSlug" value="er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[面试题 08.09]括号.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/doc/content/[面试题 08.09]括号.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 08.09" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/p0/kb961x5d6wd79gfp2h6t_8500000gn/T/leetcode/editor/cn/[面试题 08.09]括号.java" />
+              <option name="titleSlug" value="bracket-lcci" />
             </LeetcodeEditor>
           </value>
         </entry>
