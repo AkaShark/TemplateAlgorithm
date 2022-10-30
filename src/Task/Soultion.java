@@ -1,55 +1,44 @@
 package Task;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Soultion {
     public class Main {
         public void main(String[] args) {
             Scanner in = new Scanner(System.in);
-            // 注意 hasNext 和 hasNextLine 的区别
-            int skills = in.nextInt();
-            int nums = in.nextInt();
-            int times = in.nextInt();
-            int index = 0;
+            String str1 = in.next();
+            String str2 = in.next();
+            check(str1, str2);
+        }
 
-            int res = 0;
-            int[] array = new int[skills];
-            int skilIndex = 0;
-            while (in.hasNextInt()) { // 注意 while 处理多个 case
-                if (skilIndex == skills - 1) break;
-                array[skilIndex] = in.nextInt();
-                skilIndex++;
+        public Boolean check(String str1, String str2) {
+            HashMap<Character, Integer> map1 = new HashMap<>();
+            for (int i = 0; i < str1.length(); i++) {
+                map1.put(str1.charAt(i), i);
             }
-            in.close();
+            HashMap<Character, Integer> map2 = new HashMap<>();
+            for (int i = 0; i < str2.length(); i++) {
+                map2.put(str2.charAt(i), i);
+            }
 
-            Arrays.sort(array);
-            int time = 0;
-            while (index < nums) {
-                if (index == 0) {
-                    res = array[skills - 1] * times;
-                    index += times;
-                    time = 1;
-                } else {
-                    if (time == 1) {
-                        res += array[skills - 2];
-                        index += 1;
-                        time = 0;
-                    } else {
-                        if (times < (nums - index)) {
-                            res += array[skills - 1] * times;
-                            index += times;
-                            time = 1;
-                        } else {
-                            res += array[skills - 1] * (nums - index);
-                            index += (nums - index);
-                            time = 1;
-                        }
-                    }
+            if (str1.length() != str2.length()) return false;
+            int len = str1.length();
+
+            char[] str1Chars = str1.toCharArray();
+            char[] str2Chars = str2.toCharArray();
+
+            boolean flag = true;
+            for (int i = 0; i < len; i++) {
+                if (str1Chars[i] != str2Chars[i]) {
+                    if (flag == false) return false;
+                    flag = false;
+                    str1Chars[map1.get(str1Chars[i])] = str2Chars[map2.get(str1Chars[i])];
                 }
-
             }
-            System.out.println(res);
+
+            return str1Chars.toString().equals(str2Chars.toString());
         }
     }
 }
