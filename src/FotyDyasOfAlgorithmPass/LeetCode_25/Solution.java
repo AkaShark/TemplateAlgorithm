@@ -29,13 +29,15 @@ public class Solution {
     }
 
     private ListNode[] reverse(ListNode head, ListNode tail) {
-        ListNode pre = tail.next;
-        while (pre != tail) {
-            ListNode next = head.next;
-            head.next = pre;
-            pre = head;
-            head = next;
+        ListNode prev = tail.next;
+        ListNode p = head;
+        while (prev != tail) {
+            ListNode next = p.next;
+            p.next = prev;
+            prev = p;
+            p = next;
         }
+        // 翻转链表
         return new ListNode[]{tail, head};
     }
 }
