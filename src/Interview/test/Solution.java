@@ -1,5 +1,7 @@
 package Interview.test;
 
+import java.util.ArrayList;
+
 public class Solution {
     public static int answer(int x) {
         int q1 = answer1(x);
@@ -83,5 +85,6 @@ public class Solution {
 
     public static void main(String[] args) {
         answer(998);
+        
     }
 }
